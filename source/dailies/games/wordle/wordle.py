@@ -4,8 +4,8 @@ import random
 
 import pygame
 
-from ...config.dialogue_en import DialogueEn
 from ...config.constants import Constants
+from ...config.dialogue_en import DialogueEn
 from ...logs.setup_logging import setup_logging
 from ..game_infrastructure import Game
 
