@@ -1,7 +1,7 @@
 """main.py: Called when the package is run as a script."""
 
 from .config.paths import Paths
-from .logs.setup_logging import setup_logging
+from .file_interaction.read import read_file
 from .games.connections.connections import Connections
 from .games.kenken.kenken import KenKen
 from .games.mini_crossword.mini_crossword import MiniCrossword
@@ -9,7 +9,7 @@ from .games.strands.strands import Strands
 from .games.sudoku.sudoku import Sudoku
 from .games.wordle.wordle import Wordle
 from .interface.graphical_menu import main_menu
-from .file_interaction.read import read_file
+from .logs.setup_logging import setup_logging
 
 main_logger = setup_logging()
 
