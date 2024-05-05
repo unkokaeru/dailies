@@ -34,6 +34,7 @@ class Sudoku(Game):  # TODO: Refactor the Sudoku class to be more readable and m
         Examples
         --------
         >>> sudoku = Sudoku(9, 0.5)
+
         Notes
         -----
         This class initialises the Sudoku game with the given size

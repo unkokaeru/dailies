@@ -19,6 +19,7 @@ class Strands(Game):
     def __init__(self) -> None:
         """
         Initialise the Strands game.
+
         Examples
         --------
         >>> strands = Strands(
