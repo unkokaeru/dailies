@@ -8,30 +8,25 @@ kenken_logger = setup_logging()
 
 
 class KenKen(Game):
-    def __init__(self, name: str, description: str, instructions: str) -> None:
+    """
+    A game of KenKen.
+
+    Notes
+    -----
+    This class represents the KenKen game.
+    """
+
+    def __init__(self) -> None:
         """
         Initialise the KenKen game.
 
-        Parameters
-        ----------
-        name : str
-            The name of the game.
-        description : str
-            The description of the game.
-        instructions : str
-            The instructions for the game.
-
         Examples
         --------
-        >>> kenken = KenKen(
-        ...     "KenKen",
-        ...     "This is a game of KenKen.",
-        ...     "Instructions for the game."
-        ... )
+        >>> kenken = KenKen()
 
         Notes
         -----
-        This class initialises the KenKen game with a name, description, and instructions.
+        This method initialises the KenKen game.
         """
         super().__init__(
             DialogueEn.KENKEN_NAME,

@@ -487,34 +487,58 @@ class VirtualKeyboard:
 
 
 class Wordle(Game):
-    def __init__(
-        self, name: str, description: str, instructions: str, word_list: list[str]
+    """
+    A game of Wordle.
+
+    Attributes
+    ----------
+    word_list : list[str]
+        The list of words to choose from.
+    letter_tracking : dict[str, tuple[int, int, int]]
+        The letter tracking.
+
+    Methods
+    -------
+    _init_pygame() -> None:
+        Initialise Pygame.
+    _draw_text(
+        message: str,
+        size: int,
+        color: tuple[int, int, int],
+        center: tuple[int, int],
+        duration: int = 2000,
     ) -> None:
+        Draw text on the screen.
+    _handle_keydown(event: pygame.event.Event, current_guess: list[str]) -> None:
+        Handle the keydown event.
+    play() -> None:
+        Play the Wordle game.
+
+    Examples
+    --------
+    >>> wordle = Wordle()
+
+    Notes
+    -----
+    This class represents the Wordle game.
+    """
+
+    def __init__(self, word_list: list[str]) -> None:
         """
         Initialise the Wordle game.
 
         Parameters
         ----------
-        name : str
-            The name of the game.
-        description : str
-            The description of the game.
-        instructions : str
-            The instructions for the game.
         word_list : list[str]
             The list of words to choose from.
 
         Examples
         --------
-        >>> wordle = Wordle(
-        ...     "Wordle",
-        ...     "This is a game of Wordle.",
-        ...     "Instructions for the game."
-        ... )
+        >>> wordle = Wordle()
 
         Notes
         -----
-        This class initialises the Wordle game with a name, description, and instructions.
+        This class initialises the Wordle game.
         """
         super().__init__(
             DialogueEn.WORDLE_NAME,

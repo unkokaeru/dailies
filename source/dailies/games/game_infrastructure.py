@@ -6,6 +6,32 @@ game_infrastructure_logger = setup_logging()
 
 
 class Game:
+    """
+    A class representing a game.
+
+    Parameters
+    ----------
+    name : str
+        The name of the game.
+    description : str
+        The description of the game.
+    instructions : str
+        The instructions for the game.
+
+    Methods
+    -------
+    play()
+        Play the game.
+
+    Examples
+    --------
+    >>> game = Game("Game", "This is a game.", "Instructions for the game.")
+
+    Notes
+    -----
+    This class initialises the game with a name, description, and instructions.
+    """
+
     def __init__(self, name: str, description: str, instructions: str) -> None:
         """
         Initialise the game.
@@ -33,13 +59,64 @@ class Game:
         self.score: int | None = None
 
     def __name__(self) -> str:
+        """
+        Return the name of the game.
+
+        Returns
+        -------
+        str
+            The name of the game.
+
+        Examples
+        --------
+        >>> game.__name__()
+        'Game'
+
+        Notes
+        -----
+        This method returns the name of the game.
+        """
         return self.name
 
     def __str__(self) -> str:
+        """
+        Return the name and description of the game.
+
+        Returns
+        -------
+        str
+            The name and description of the game.
+
+        Examples
+        --------
+        >>> game.__str__()
+        'Game: This is a game.'
+
+        Notes
+        -----
+        This method returns the name and description of the game.
+        """
         return f"{self.name}: {self.description}"
 
     def __repr__(self) -> str:
-        return f"Game({self.name}, {self.description}, {self.instructions})"
+        """
+        Return the name, description, and instructions of the game.
+
+        Returns
+        -------
+        str
+            The name, description, and instructions of the game.
+
+        Examples
+        --------
+        >>> game.__repr__()
+        'Game: This is a game.\n--------\n\nInstructions for the game.'
+
+        Notes
+        -----
+        This method returns the name, description, and instructions of the game.
+        """
+        return f"{self.name}: {self.description}.\n--------\n\nInstructions: {self.instructions})"
 
     def play(self) -> None:
         """

@@ -8,30 +8,25 @@ mini_crossword_logger = setup_logging()
 
 
 class MiniCrossword(Game):
-    def __init__(self, name: str, description: str, instructions: str) -> None:
+    """
+    A game of Mini Crossword.
+
+    Notes
+    -----
+    This class represents the Mini Crossword game.
+    """
+
+    def __init__(self) -> None:
         """
         Initialise the Mini Crossword game.
 
-        Parameters
-        ----------
-        name : str
-            The name of the game.
-        description : str
-            The description of the game.
-        instructions : str
-            The instructions for the game.
-
         Examples
         --------
-        >>> mini_crossword = MiniCrossword(
-        ...     "Mini Crossword",
-        ...     "This is a game of Mini Crossword.",
-        ...     "Instructions for the game."
-        ... )
+        >>> mini_crossword = MiniCrossword()
 
         Notes
         -----
-        This class initialises the Mini Crossword game with a name, description, and instructions.
+        This method initialises the Mini Crossword game.
         """
         super().__init__(
             DialogueEn.MINI_CROSSWORD_NAME,

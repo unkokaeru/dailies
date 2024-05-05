@@ -8,19 +8,17 @@ strands_logger = setup_logging()
 
 
 class Strands(Game):
-    def __init__(self, name: str, description: str, instructions: str) -> None:
+    """
+    A game of Strands.
+
+    Notes
+    -----
+    This class represents the Strands game.
+    """
+
+    def __init__(self) -> None:
         """
         Initialise the Strands game.
-
-        Parameters
-        ----------
-        name : str
-            The name of the game.
-        description : str
-            The description of the game.
-        instructions : str
-            The instructions for the game.
-
         Examples
         --------
         >>> strands = Strands(
@@ -31,7 +29,7 @@ class Strands(Game):
 
         Notes
         -----
-        This class initialises the Strands game with a name, description, and instructions.
+        This class initialises the Strands game.
         """
         super().__init__(
             DialogueEn.STRANDS_NAME,

@@ -8,30 +8,25 @@ connections_logger = setup_logging()
 
 
 class Connections(Game):
-    def __init__(self, name: str, description: str, instructions: str) -> None:
-        """
-        Initialise the Connections game.
+    """
+    A game of Connections.
 
-        Parameters
-        ----------
-        name : str
-            The name of the game.
-        description : str
-            The description of the game.
-        instructions : str
-            The instructions for the game.
+    Notes
+    -----
+    This class represents the Connections game.
+    """
+
+    def __init__(self) -> None:
+        """
+        Initialises the Connections game.
 
         Examples
         --------
-        >>> connections = Connections(
-        ...     "Connections",
-        ...     "This is a game of connections.",
-        ...     "Instructions for the game."
-        ... )
+        >>> connections = Connections()
 
         Notes
         -----
-        This class initialises the Connections game with a name, description, and instructions.
+        This method initialises the Connections game.
         """
         super().__init__(
             DialogueEn.CONNECTIONS_NAME,

@@ -12,20 +12,20 @@ sudoku_logger = setup_logging()
 
 
 class Sudoku(Game):  # TODO: Refactor the Sudoku class to be more readable and maintainable.
-    def __init__(
-        self, name: str, description: str, instructions: str, size: int, percent_to_remove: float
-    ) -> None:
+    """
+    A game of Sudoku.
+
+    Notes
+    -----
+    This class represents the Sudoku game.
+    """
+
+    def __init__(self, size: int, percent_to_remove: float) -> None:
         """
         Initialise the Sudoku game.
 
         Parameters
         ----------
-        name : str
-            The name of the game.
-        description : str
-            The description of the game.
-        instructions : str
-            The instructions for the game.
         size : int
             The size of the Sudoku grid.
         percent_to_remove : float
@@ -33,18 +33,11 @@ class Sudoku(Game):  # TODO: Refactor the Sudoku class to be more readable and m
 
         Examples
         --------
-        >>> sudoku = Sudoku(
-        ...     "Sudoku",
-        ...     "This is a game of Sudoku.",
-        ...     "Instructions for the game.",
-        ...     9,
-        ...     0.5
-        ... )
-
+        >>> sudoku = Sudoku(9, 0.5)
         Notes
         -----
-        This class initialises the Sudoku game with a name, description, instructions,
-        size, and percentage of cells to remove.
+        This class initialises the Sudoku game with the given size
+        and percentage of cells to remove.
         """
         super().__init__(
             DialogueEn.SUDOKU_NAME,
