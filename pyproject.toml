@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "dailies"
-version = "0.1.1"
+version = "0.1.2"
 description = "A collection of daily games inspired by NYT Games."
 authors = ["W. Fayers <wills@fayers.com>"]
 license = "MIT"
