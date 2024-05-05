@@ -18,6 +18,9 @@ include = ["LICENSE", "source/dailies/py.typed", "source/dailies/VERSION"]
 python = ">=3.8,<4.0"
 rich = "^12.0.0"
 
+[tool.poetry.scripts]
+dailies = "dailies.main:main"
+
 [tool.poetry.group.test.dependencies]
 pytest = "^7.2.0"
 tox = "^3.27.0"
